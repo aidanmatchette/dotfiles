@@ -1,0 +1,28 @@
+#!/bin/sh
+# HISTFILE="$XDG_DATA_HOME"/zsh/history
+HISTSIZE=1000000
+SAVEHIST=1000000
+export PATH="$HOME/.local/bin":$PATH
+#export PATH="$HOME/bin"
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH="$HOME/.local/share/neovim/bin":$PATH
+export PATH="/Users/aidanmatchette/code/rust/binaries":$PATH
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+
+export FZF_CTRL_R_OPTS="--border-label=' History ' --prompt=' '"
+export FZF_DEFAULT_COMMAND="fd -H -E '.git'"
+export FZF_DEFAULT_OPTS="--reverse --no-info --prompt=' ' --height 50% --border --pointer='' --marker=' ' --ansi --color gutter:-1,bg+:-1,header:4,separator:0,info:0,label:4,border:4,prompt:7,pointer:5,query:7,prompt:7"
+export FZF_TMUX_OPTS="-p --no-info --ansi --color gutter:-1,bg+:-1,header:4,separator:0,info:0,label:4,border:4,prompt:7,pointer:5,query:7,prompt:7"
+
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
+
+export LS_COLORS="$(vivid generate ~/.config/colors/catppuccin-macchiato.yml)"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export PGDATA=/opt/homebrew/var/postgres@14

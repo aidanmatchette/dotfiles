@@ -14,5 +14,4 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-bindkey -s '^S' "switch-sessions\n"
-bindkey -s '^F' "t\n"
+bindkey -s '^F' "tt\n"

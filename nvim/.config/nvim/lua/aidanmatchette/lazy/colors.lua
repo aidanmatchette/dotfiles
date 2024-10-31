@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
 	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+	vim.cmd.colorscheme("tokyonight")
 
     vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
     vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
@@ -27,38 +27,8 @@ return {
                 },
             })
 
-        end
-    },
-
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        config = function ()
-            require("catppuccin").setup({
-                flavour = "macchiato", -- latte, frappe, macchiato, mocha
-                transparent_background = true, -- disables setting the background color.
-                term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
-                no_italic = true, -- Force no italic
-                no_bold = true, -- Force no bold
-                no_underline = true, -- Force no underline
-            })
-            ColorMyPencils("catppuccin")
-        end
-    },
-
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require('rose-pine').setup({
-                disable_background = true,
-                enable = {
-                    terminal = true,
-                    italic = false,
-                    transparency = true,
-                }
-            })
-
+            vim.cmd("colorscheme tokyonight")
+            ColorMyPencils("tokyonight")
         end
     },
 }
